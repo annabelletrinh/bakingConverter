@@ -16,5 +16,5 @@ and between US system to Metric System.
 * French
 
 ## Authors :
-**Annabelle Trinh : ** *programming*
-**mynamepong(https://www.flaticon.com/authors/mynamepong) : *icon* 
+**Annabelle Trinh : ** programming
+**mynamepong :** icon 
