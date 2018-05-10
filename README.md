@@ -15,6 +15,9 @@ and between US system to Metric System.
 ## Running Prerequisite :
 * Java 1.8 
 
+## Development Prerequisite:
+* Apache Commons Lang library
+
 ## Authors :
 **Annabelle Trinh :** programming
 
