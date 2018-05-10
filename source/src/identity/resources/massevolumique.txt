@@ -1,0 +1,8 @@
+Eau,1.000
+Lait,1.030
+Huile,0.920
+Beurre,0.918
+Farine,0.550
+Sucre,0.845
+Sel,1.234
+Cacao,0.440
