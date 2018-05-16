@@ -1,4 +1,4 @@
-package identity;
+package converter;
 
 import java.io.IOException;
 import java.math.RoundingMode;
@@ -19,8 +19,8 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
-	private static final String RESOURCE_PATH = "/identity/resources/";
-	private static final String VIEW_PATH = "/identity/view/";
+	private static final String RESOURCE_PATH = "/converter/resources/";
+	private static final String VIEW_PATH = "/converter/view/";
 
 	private Stage primaryStage;
 	private BorderPane mainLayout;

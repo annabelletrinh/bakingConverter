@@ -1,4 +1,4 @@
-package identity;
+package converter;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -20,7 +20,7 @@ import javafx.scene.control.TextField;
 
 public class Controller {
 
-	private static final String RESOURCE_PATH = "/identity/resources/";
+	private static final String RESOURCE_PATH = "/converter/resources/";
     private LinkedHashMap<String, Double> masseVolumique;
     private LinkedHashMap<String, Double> litre;
     private LinkedHashMap<String, Double> gramme;
@@ -223,13 +223,14 @@ public class Controller {
        	try{
 	  		if(StringUtils.isNotBlank(input.getText())){
        			inQt = Double.parseDouble(input.getText().trim().replace(",","."));
-        	}  
+        	}
+	  		System.out.println("Unit a changé" + inQt);
            	if(iUnit.contains("L") && oUnit.contains("L") ){
            		value = inQt * litre.get(iUnit) / litre.get(oUnit);
            	}else if (iUnit.contains("g") && oUnit.contains("g")){
            		value = inQt * gramme.get(iUnit) / gramme.get(oUnit);
             }else if (iUnit.contains("g")){
-           		value = inQt * gramme.get(iUnit) * litre.get(oUnit )/ masseVolumique.get(pickedItem);
+           		value = inQt * gramme.get(iUnit) / (litre.get(oUnit ) * masseVolumique.get(pickedItem));
            	}else{
            		value = inQt * litre.get(iUnit) * masseVolumique.get(pickedItem) / gramme.get(oUnit);
            	}
@@ -248,12 +249,15 @@ public class Controller {
        	try{
 	  		if(StringUtils.isNotBlank(newValue)){
        			inQt = Double.parseDouble(newValue.trim().replace(",","."));
-        	}             	if(iUnit.contains("L") && oUnit.contains("L") ){
+        	}
+	  		System.out.println("Input a changé:" + inQt);
+	  		if(iUnit.contains("L") && oUnit.contains("L") ){
            		value = inQt * litre.get(iUnit) / litre.get(oUnit);
            	}else if (iUnit.contains("g") && oUnit.contains("g")){
            		value = inQt * gramme.get(iUnit) / gramme.get(oUnit);
             }else if (iUnit.contains("g")){
-           		value = inQt * gramme.get(iUnit) * litre.get(oUnit )/ masseVolumique.get(pickedItem);
+           		value = inQt * gramme.get(iUnit) / (litre.get(oUnit ) * masseVolumique.get(pickedItem));
+           		System.out.println("je suis là");
            	}else{
            		value = inQt * litre.get(iUnit) * masseVolumique.get(pickedItem) / gramme.get(oUnit);
            	}
