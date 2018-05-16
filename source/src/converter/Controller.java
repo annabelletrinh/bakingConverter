@@ -224,7 +224,6 @@ public class Controller {
 	  		if(StringUtils.isNotBlank(input.getText())){
        			inQt = Double.parseDouble(input.getText().trim().replace(",","."));
         	}
-	  		System.out.println("Unit a changé" + inQt);
            	if(iUnit.contains("L") && oUnit.contains("L") ){
            		value = inQt * litre.get(iUnit) / litre.get(oUnit);
            	}else if (iUnit.contains("g") && oUnit.contains("g")){
@@ -250,14 +249,12 @@ public class Controller {
 	  		if(StringUtils.isNotBlank(newValue)){
        			inQt = Double.parseDouble(newValue.trim().replace(",","."));
         	}
-	  		System.out.println("Input a changé:" + inQt);
 	  		if(iUnit.contains("L") && oUnit.contains("L") ){
            		value = inQt * litre.get(iUnit) / litre.get(oUnit);
            	}else if (iUnit.contains("g") && oUnit.contains("g")){
            		value = inQt * gramme.get(iUnit) / gramme.get(oUnit);
             }else if (iUnit.contains("g")){
            		value = inQt * gramme.get(iUnit) / (litre.get(oUnit ) * masseVolumique.get(pickedItem));
-           		System.out.println("je suis là");
            	}else{
            		value = inQt * litre.get(iUnit) * masseVolumique.get(pickedItem) / gramme.get(oUnit);
            	}
