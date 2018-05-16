@@ -12,8 +12,15 @@ and between US system to Metric System.
 ## Supporting Language:
 * French
 
-## Running Prerequisite :
+## Running the Jar utility:
+### Prerequisite
 * Java 1.8 
+### Installing step
+* Download bakingConvertar.jar
+* Double-click on it.
+
+## Development Prerequisite:
+* Apache Commons Lang library
 
 ## Authors :
 **Annabelle Trinh :** programming
