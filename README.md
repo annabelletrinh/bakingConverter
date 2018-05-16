@@ -16,7 +16,7 @@ and between US system to Metric System.
 ### Prerequisite
 * Java 1.8 
 ### Installing step
-* Download bakingConvertar.jar
+* Download bakingConverter.jar
 * Double-click on it.
 
 ## Development Prerequisite:
